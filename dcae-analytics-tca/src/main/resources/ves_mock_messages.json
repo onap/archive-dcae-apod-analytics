@@ -1,0 +1,113 @@
+[
+  {
+    "event": {
+      "measurementsForVfScalingFields": {
+        "measurementInterval": 10,
+        "measurementsForVfScalingVersion": 1.1,
+        "vNicUsageArray": [
+          {
+            "multicastPacketsIn": 0,
+            "bytesIn": 20445,
+            "unicastPacketsIn": 0,
+            "multicastPacketsOut": 0,
+            "broadcastPacketsOut": 0,
+            "packetsOut": 0,
+            "bytesOut": 0,
+            "broadcastPacketsIn": 0,
+            "packetsIn": 700,
+            "unicastPacketsOut": 0,
+            "vNicIdentifier": "eth1"
+          }
+        ]
+      },
+      "commonEventHeader": {
+        "reportingEntityName": "zdfw1fwl01fwl02",
+        "startEpochMicrosec": 1484335735737754,
+        "lastEpochMicrosec": 1484335745737754,
+        "eventId": "61542",
+        "sourceName": "Dummy VM name - No Metadata available",
+        "sequence": 61542,
+        "priority": "Normal",
+        "functionalRole": "vFirewall",
+        "domain": "measurementsForVfScaling",
+        "reportingEntityId": "No UUID available",
+        "sourceId": "Dummy VM UUID - No Metadata available",
+        "version": 1.1
+      }
+    }
+  },
+  {
+    "event": {
+      "measurementsForVfScalingFields": {
+        "measurementInterval": 10,
+        "measurementsForVfScalingVersion": 1.1,
+        "vNicUsageArray": [
+          {
+            "multicastPacketsIn": 0,
+            "bytesIn": 20445,
+            "unicastPacketsIn": 0,
+            "multicastPacketsOut": 0,
+            "broadcastPacketsOut": 0,
+            "packetsOut": 0,
+            "bytesOut": 0,
+            "broadcastPacketsIn": 0,
+            "packetsIn": 300,
+            "unicastPacketsOut": 0,
+            "vNicIdentifier": "eth1"
+          }
+        ]
+      },
+      "commonEventHeader": {
+        "reportingEntityName": "zdfw1fwl01fwl02",
+        "startEpochMicrosec": 1484335735737754,
+        "lastEpochMicrosec": 1484335745737754,
+        "eventId": "61542",
+        "sourceName": "Dummy VM name - No Metadata available",
+        "sequence": 61542,
+        "priority": "Normal",
+        "functionalRole": "vFirewall",
+        "domain": "measurementsForVfScaling",
+        "reportingEntityId": "No UUID available",
+        "sourceId": "Dummy VM UUID - No Metadata available",
+        "version": 1.1
+      }
+    }
+  },
+  {
+    "event": {
+      "measurementsForVfScalingFields": {
+        "measurementInterval": 10,
+        "measurementsForVfScalingVersion": 1.1,
+        "vNicUsageArray": [
+          {
+            "multicastPacketsIn": 0,
+            "bytesIn": 20445,
+            "unicastPacketsIn": 0,
+            "multicastPacketsOut": 0,
+            "broadcastPacketsOut": 0,
+            "packetsOut": 0,
+            "bytesOut": 0,
+            "broadcastPacketsIn": 0,
+            "packetsIn": 400,
+            "unicastPacketsOut": 0,
+            "vNicIdentifier": "eth1"
+          }
+        ]
+      },
+      "commonEventHeader": {
+        "reportingEntityName": "zdfw1fwl01fwl02",
+        "startEpochMicrosec": 1484335735737754,
+        "lastEpochMicrosec": 1484335745737754,
+        "eventId": "61542",
+        "sourceName": "Dummy VM name - No Metadata available",
+        "sequence": 61542,
+        "priority": "Normal",
+        "functionalRole": "vFirewall",
+        "domain": "measurementsForVfScaling",
+        "reportingEntityId": "No UUID available",
+        "sourceId": "Dummy VM UUID - No Metadata available",
+        "version": 1.1
+      }
+    }
+  }
+]
