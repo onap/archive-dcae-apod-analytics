@@ -51,14 +51,14 @@
 
     <distributionManagement>
         <repository>
-            <id>osecomp-nexus-releases</id>
-            <name>OSECOMP Release Repository</name>
-            <url>https://ecomp-nexus:8443/repository/maven-releases</url>
+            <id>ecomp-releases</id>
+            <name>OpenECOMP Release Repository</name>
+            <url>${openecomp.nexus.releases}</url>
         </repository>
         <snapshotRepository>
-            <id>osecomp-nexus-snapshots</id>
-            <name>OSECOMP Snapshot Repository</name>
-            <url>https://ecomp-nexus:8443/repository/maven-snapshots</url>
+            <id>ecomp-snapshots</id>
+            <name>OpenECOMP Snapshot Repository</name>
+            <url>${openecomp.nexus.snapshots}</url>
         </snapshotRepository>
         <site>
             <id>dcae-javadoc</id>
@@ -148,6 +148,9 @@
         </jacoco.ut.execution.data.file>
         <dependency.locations.enabled>false</dependency.locations.enabled>
 
+        <!--NEXUS SETTINGS -->
+        <openecomp.nexus.releases>https://nexus.openecomp.org/content/repositories/releases/</openecomp.nexus.releases>
+        <openecomp.nexus.snapshots>https://nexus.openecomp.org/content/repositories/snapshots/</openecomp.nexus.snapshots>
 
     </properties>
 
