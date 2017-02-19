@@ -863,6 +863,7 @@
 
 
                 <!-- BLACK DUCK LICENSE SCANNER -->
+                <!-- 
                 <plugin>
                     <groupId>com.blackducksoftware.integration</groupId>
                     <artifactId>hub-maven-plugin</artifactId>
@@ -882,6 +883,7 @@
                         </execution>
                     </executions>
                 </plugin>
+                -->
 
                 <!-- LICENSE PLUGIN -->
                 <plugin>
