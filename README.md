@@ -101,3 +101,10 @@ curl -vk --user ${OPENECOMP_NEXUS_USER}:${OPENECOMP_NEXUS_PASSWORD} --upload-fil
 SEND_TO=${OPENECOMP_NEXUS_RAW}"/org.openecomp.dcae/deb-snapshots/"${PACKAGE_GROUP_ID}"/"${OUTPUT_FILE_DATE_STAMPED}
 curl -vk --user ${OPENECOMP_NEXUS_USER}:${OPENECOMP_NEXUS_PASSWORD} --upload-file ${OUTPUT_DIR}/${OUTPUT_FILE_DATE_STAMPED} ${SEND_TO}
 ```
+
+#### TCA Application Configuration
+
+TCA Application is setup to do batching of publisher alerts (defaults to 10) which means publisher will
+flush the alerts to DMaaP Topic only when total 10 alerts are available. To disable publisher batching set 
+"publisherMaxBatchSize" CDAP runtime argument to 1. This will flush alert message to DMaaP MR topic
+instantaneously and will disable publisher batching.

@@ -20,14 +20,10 @@
   -->
 
 <FindBugsFilter>
-    <Match>
-        <!-- Ignore warnings for DACE Models project -->
-        <Class name="org.openecomp.dcae.analytics.model.domain.cef.MeasurementsForVfScaling"/>
-    </Match>
 
     <Match>
         <!-- TCA Application has unconfirmed cast which is provided by CDAP -->
-        <Class name="org.openecomp.dcae.analytics.tca.TCAAnalyticsApplication"/>
+        <Class name="org.openecomp.dcae.apod.analytics.tca.TCAAnalyticsApplication"/>
         <Bug pattern="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE"/>
     </Match>
 

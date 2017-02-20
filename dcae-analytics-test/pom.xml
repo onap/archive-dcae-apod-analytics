@@ -27,7 +27,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.openecomp.dcae.analytics</groupId>
+        <groupId>org.openecomp.dcae.apod.analytics</groupId>
         <artifactId>dcae-analytics</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
