@@ -51,14 +51,14 @@
 
     <distributionManagement>
         <repository>
-            <id>osecomp-nexus-releases</id>
-            <name>OSECOMP Release Repository</name>
-            <url>https://ecomp-nexus:8443/repository/maven-releases</url>
+            <id>ecomp-releases</id>
+            <name>OpenECOMP Release Repository</name>
+            <url>${nexusproxy}/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
-            <id>osecomp-nexus-snapshots</id>
-            <name>OSECOMP Snapshot Repository</name>
-            <url>https://ecomp-nexus:8443/repository/maven-snapshots</url>
+            <id>ecomp-snapshots</id>
+            <name>OpenECOMP Snapshot Repository</name>
+            <url>${nexusproxy}/content/repositories/snapshots</url>
         </snapshotRepository>
         <site>
             <id>dcae-javadoc</id>
