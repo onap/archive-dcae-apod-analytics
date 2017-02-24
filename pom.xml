@@ -148,7 +148,7 @@
         </jacoco.ut.execution.data.file>
         <dependency.locations.enabled>false</dependency.locations.enabled>
 
-        <nexusproxy>https://nexus.opencomp.org</nexusproxy>
+        <nexusproxy>https://nexus.openecomp.org</nexusproxy>
     </properties>
 
     <dependencyManagement>
