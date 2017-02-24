@@ -148,7 +148,7 @@
         </jacoco.ut.execution.data.file>
         <dependency.locations.enabled>false</dependency.locations.enabled>
 
-
+        <nexusproxy>https://nexus.opencomp.org</nexusproxy>
     </properties>
 
     <dependencyManagement>
@@ -956,6 +956,17 @@
                     <version>${surefire.report.plugin.version}</version>
                 </plugin>
 
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>1.6.7</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <serverId>ecomp-staging</serverId>
+                        <nexusUrl>${nexusproxy}</nexusUrl>
+                        <stagingProfileId>176c31dfe190a</stagingProfileId>
+                    </configuration>
+                </plugin>
             </plugins>
 
         </pluginManagement>
