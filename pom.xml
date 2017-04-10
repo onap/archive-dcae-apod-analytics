@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ ============LICENSE_START=========================================================
   ~ dcae-analytics
@@ -59,7 +58,7 @@
         </snapshotRepository>
         <site>
             <id>ecomp-site</id>
-            <url>dav:${nexusproxy}/content/sites/site/org/openecomp/dcae/apod/analytics/${project.artifactId}/${project.version}/</url>
+            <url>dav:${nexusproxy}/content/sites/site/org/onap/dcae/apod/analytics/${project.artifactId}/${project.version}/</url>
         </site>
     </distributionManagement>
 
