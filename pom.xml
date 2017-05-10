@@ -1035,6 +1035,10 @@
                     <stagingProfileId>176c31dfe190a</stagingProfileId>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+            </plugin>
 
         </plugins>
     </build>
