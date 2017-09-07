@@ -27,6 +27,10 @@ package org.openecomp.dcae.apod.analytics.common;
  */
 public abstract class AnalyticsConstants {
 
+    //not meant to be instantiated
+    private AnalyticsConstants() {
+    }
+
 
     // ===============  Common Constants for all DCAE Analytics Modules ==================== //
 
