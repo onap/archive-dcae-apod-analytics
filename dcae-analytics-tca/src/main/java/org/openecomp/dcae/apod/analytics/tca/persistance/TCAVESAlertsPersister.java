@@ -37,62 +37,62 @@ import static org.openecomp.dcae.apod.analytics.common.CDAPComponentsConstants.T
 import static org.openecomp.dcae.apod.analytics.common.utils.PersistenceUtils.TABLE_ROW_KEY_COLUMN_NAME;
 
 /**
- *
  * @author Rajiv Singla. Creation Date: 11/16/2016.
  */
 public abstract class TCAVESAlertsPersister {
 
-    private static final Logger LOG = LoggerFactory.getLogger(TCAVESAlertsPersister.class);
+  private static final Logger LOG = LoggerFactory.getLogger(TCAVESAlertsPersister.class);
 
-    /**
-     * Persists Alert Message to Alerts Table
-     *
-     * @param alertMessage alert Message
-     * @param tcaVESAlertTable alert Table Name
-     */
-    public static void persist(final String alertMessage, final ObjectMappedTable<TCAVESAlertEntity> tcaVESAlertTable) {
-        final Date currentDate = new Date();
-        final TCAVESAlertEntity alertEntity = new TCAVESAlertEntity(currentDate.getTime(),
-                StringEscapeUtils.unescapeJson(alertMessage));
-        // row key is same as current timestamp
-        final String rowKey = createRowKey(currentDate);
-        tcaVESAlertTable.write(rowKey, alertEntity);
+  /**
+   * Persists Alert Message to Alerts Table
+   *
+   * @param alertMessage alert Message
+   * @param tcaVESAlertTable alert Table Name
+   */
+  public static void persist(final String alertMessage,
+      final ObjectMappedTable<TCAVESAlertEntity> tcaVESAlertTable) {
+    final Date currentDate = new Date();
+    final TCAVESAlertEntity alertEntity = new TCAVESAlertEntity(currentDate.getTime(),
+        StringEscapeUtils.unescapeJson(alertMessage));
+    // row key is same as current timestamp
+    final String rowKey = createRowKey(currentDate);
+    tcaVESAlertTable.write(rowKey, alertEntity);
 
-        LOG.debug("Finished persisting VES Alert message ID: {} in VES Alerts table.", rowKey);
+    LOG.debug("Finished persisting VES Alert message ID: {} in VES Alerts table.", rowKey);
+  }
+
+
+  /**
+   * Creates {@link DatasetProperties} for Alerts Table
+   *
+   * @param timeToLiveSeconds alerts table Time to Live
+   * @return Alerts table properties
+   */
+  public static DatasetProperties getDatasetProperties(final int timeToLiveSeconds) {
+    try {
+      return ObjectMappedTableProperties.builder()
+          .setType(TCAVESAlertEntity.class)
+          .setRowKeyExploreName(TABLE_ROW_KEY_COLUMN_NAME)
+          .setRowKeyExploreType(Schema.Type.STRING)
+          .add(IndexedTable.PROPERTY_TTL, timeToLiveSeconds)
+          .setDescription(TCA_DEFAULT_VES_ALERTS_DESCRIPTION_TABLE)
+          .build();
+    } catch (UnsupportedTypeException e) {
+      final String errorMessage = "Unable to convert TCAVESAlertEntity class to Schema";
+      throw new DCAEAnalyticsRuntimeException(errorMessage, LOG, new
+          IllegalArgumentException(errorMessage, e));
     }
 
+  }
 
-    /**
-     * Creates {@link DatasetProperties} for Alerts Table
-     *
-     * @param timeToLiveSeconds alerts table Time to Live
-     * @return Alerts table properties
-     */
-    public static DatasetProperties getDatasetProperties(final int timeToLiveSeconds) {
-        try {
-            return ObjectMappedTableProperties.builder()
-                    .setType(TCAVESAlertEntity.class)
-                    .setRowKeyExploreName(TABLE_ROW_KEY_COLUMN_NAME)
-                    .setRowKeyExploreType(Schema.Type.STRING)
-                    .add(IndexedTable.PROPERTY_TTL, timeToLiveSeconds)
-                    .setDescription(TCA_DEFAULT_VES_ALERTS_DESCRIPTION_TABLE)
-                    .build();
-        } catch (UnsupportedTypeException e) {
-            final String errorMessage = "Unable to convert TCAVESAlertEntity class to Schema";
-            throw new DCAEAnalyticsRuntimeException(errorMessage, LOG, new IllegalArgumentException(errorMessage));
-        }
-
-    }
-
-    /**
-     * Creates Row Key for Alerts Table
-     *
-     * @param date current Date
-     *
-     * @return row key
-     */
-    public static String createRowKey(final Date date) {
-       return String.format("%025d", date.getTime());
-    }
+  /**
+   * Creates Row Key for Alerts Table
+   *
+   * @param date current Date
+   * @return row key
+   */
+  public static String createRowKey(final Date date) {
+    return String.format("%025d", date.getTime());
+  }
 
 }
