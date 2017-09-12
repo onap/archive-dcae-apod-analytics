@@ -31,6 +31,10 @@ package org.openecomp.dcae.apod.analytics.common;
  */
 public abstract class CDAPMetricsConstants {
 
+    //not meant to be instantiated
+    private CDAPMetricsConstants() {
+    }
+
     /**
      * Metric captures count of all responses received from DMaaP MR Subscriber Topic
      */

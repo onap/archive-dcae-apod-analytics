@@ -47,6 +47,7 @@ public abstract class CDAPBaseAppConfig extends Config implements CDAPAppConfig 
      *
      * @return CDAP application name
      */
+    @Override
     public String getAppName() {
         return appName;
     }
@@ -56,6 +57,7 @@ public abstract class CDAPBaseAppConfig extends Config implements CDAPAppConfig 
      *
      * @return CDAP application description
      */
+    @Override
     public String getAppDescription() {
         return appDescription;
     }

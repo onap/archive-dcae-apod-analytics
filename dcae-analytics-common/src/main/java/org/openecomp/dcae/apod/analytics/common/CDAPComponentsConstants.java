@@ -52,6 +52,10 @@ package org.openecomp.dcae.apod.analytics.common;
  */
 public abstract class CDAPComponentsConstants {
 
+    //not meant to be instantiated
+    private CDAPComponentsConstants() {
+    }
+
     // ===============  Common Module Constants ==================== //
 
     /**
